@@ -11,7 +11,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Parkinsans:wght@300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Parkinsans:wght@300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Luckiest+Guy&family=Oswald:wght@200..700&family=Parkinsans:wght@300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <meta name='description' content="Design and develop the a course home page using the following wireframe as a guide for the layout and content.">
+        <meta name='description' content="Design and develop the a course home page using HTML, CSS AND JAVASCRIPT as a guide for the layout and content FOR THE COURSE WDD231">
         <meta name="author" content="Bryan Malpartida">
         <script src="scripts/chamber.js" defer></script>
     </head>
@@ -41,6 +41,28 @@
 
     <main>
         <h2 id="Header">Home Page</h2>
+        <div id="top-boxes">
+            <div id="course-work">
+                <h2>Course Work</h2>
+                <p id="course-description">Select a course to view its description and technology.</p>
+                <ul id="course-technology"></ul>
+            </div>
+            <div id="lima-peru">
+                <h2>Lima, Perú</h2>
+                <img src="images/lima.webp" alt="Lima, Perú">
+                <p>La costa verde</p>
+            </div>
+        </div>
+        <section id="certificate-section">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div id="filter-buttons">
+                <button id="all">All</button>
+                <button id="wdd">WDD</button>
+                <button id="cse">CSE</button>
+            </div>
+            <div id="courses-container"></div>
+            <p>Total Credits Required: <span id="total-credits">0</span></p>
+        </section>
     </main>
 
     <div class="right-sidebar"></div>

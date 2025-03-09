@@ -1,6 +1,6 @@
 @media screen and (max-width: 768px){
     
-
+/*HEAD2*/
     h2{
     display:flex;
     justify-content: center; 
@@ -8,7 +8,7 @@
     font-size:38px;
     padding:30px;
     }
-    
+/*HAMBURGUER*/
     .hamburger {
         display: block; 
     }
@@ -22,7 +22,7 @@
     .hamburger.active .bar:nth-child(3){
         transform: translateY(-8px) rotate(-45deg);
     }
-
+/*NAV BAR*/
     .navigation{
         position:fixed;
         left:-120%;
@@ -46,4 +46,14 @@
 
     }
 
+    /*MAIN SECTION COURSE WORK AND LIMA PERÚ/*/
+    #top-boxes {
+        flex-direction: column;
+    }
+
+    /*CERTIFICATE BOX*/
+    #courses-container {
+        flex-direction: column;
+    }
 }
+
