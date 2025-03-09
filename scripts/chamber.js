@@ -99,7 +99,7 @@ const courses = [
     }
 ];
 
-//CALLING
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const coursesContainer = document.getElementById('courses-container');
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterButtons = document.getElementById('filter-buttons');
     const courseDescription = document.getElementById('course-description');
     const courseTechnology = document.getElementById('course-technology');
-//FILTERS
+
     function displayCourses(filter = 'all') {
         coursesContainer.innerHTML = '';
         let filteredCourses = courses;
@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p>Credits: ${course.credits}</p>
             `;
 
-    //DISPLAY
+    
             courseCard.addEventListener('click', () => {
                 courseDescription.textContent = course.description;
                 courseTechnology.innerHTML = course.technology.map(tech => `<li>${tech}</li>`).join('');
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const total = filteredCourses.reduce((sum, course) => sum + course.credits, 0);
         totalCredits.textContent = total;
     }
-    //BUTTON
+
     filterButtons.addEventListener('click', (event) => {
         if (event.target.tagName === 'BUTTON') {
             displayCourses(event.target.id);
