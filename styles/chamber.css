@@ -1,0 +1,206 @@
+/*STRUCTURE*/
+
+body {
+    display: grid;
+    height: 100vh;
+    grid-template: auto 1fr auto / 0.1fr 1.8fr 0.1fr;
+    font-family: "Roboto", serif;
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+}
+
+header {
+    
+    font-family: "Bebas Neue", serif; 
+    justify-content: space-between; 
+    align-items: center; 
+    color: #ffffff;
+    background-color: #0f0d0d;
+    grid-column: 1 / 4;
+    
+}
+
+
+
+.left-sidebar {
+    grid-column: 1 / 2;
+  }
+
+  main {
+    background-color: #ffffff;
+    color:rgb(9, 40, 61);
+    grid-column: 2 / 3;
+    width: 100%;
+    padding: 20px; 
+    box-sizing: border-box;
+     
+}
+
+p{
+    font-weight: bold;
+}
+
+.right-sidebar {
+    grid-column: 3 / 4;
+  }
+
+footer {
+    text-align: center;
+    color: #ffffff;
+    font-size: large;
+    padding:15px;
+    background-color: rgb(9, 40, 61);
+    grid-column: 1 / 4;
+  }
+
+.left-sidebar,
+.right-sidebar {
+    padding: 1rem;
+    color:#1A1A1A;
+    background: #ffffff;
+}
+
+/*HEADER STUFF*/
+.header-content {
+    background-color: rgb(9, 40, 61);
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+h1 {
+	text-align: center;
+	padding: 0.5rem;
+	color:#ffffff;
+}
+
+h2 {
+    font-family: "Luckiest Guy", serif;
+}
+
+
+
+.photo {
+    width:100px;
+    height:130px;
+    border: 3px solid transparent; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    margin:10px;
+}
+
+
+/*NAVIGATION BAR*/
+
+nav {
+    margin:0px;
+}
+
+
+
+#navtitle{
+    margin: auto 10px;
+}
+
+.navigation {
+    list-style: none;
+    display: flex;
+    font-size: x-large;
+    flex-wrap: wrap;
+	align-items: center;
+}
+.navigation li {
+	flex: 1 1 auto;
+}
+
+.navigation a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 1px 20px;  
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.navigation a:hover {
+    transform: scale(1.20);
+    color:rgb(40, 160, 240);
+}
+
+/*hamburguer*/
+
+
+.hamburger {
+    display: none; 
+    cursor: pointer;
+    position: absolute; 
+    right: 20px; 
+    top: 20px; 
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: #00BFFF;
+}
+
+textarea {
+    width: 50%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+button {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin: 0.5rem;
+    transition: background-color 0.3s ease;  
+    }
+    
+button:hover{
+    background-color: #555;
+    }
+    
+form {  
+    padding: 4px;
+    } 
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-family: "Bebas Neue", serif;
+    }
+
+
+/*FOOTER/*
+/*FOOTER EDIT*/
+
+#year{
+    font-size: large;
+    }
+     
+    #lastModified{
+    font-size: small;
+    color: #fafafa;
+    }
+        
+    .highlight {
+    color: #ffffff;
+    font-weight: 400;
+        
+    } 
+    
+    p{
+    margin:0;
+    }
+    /*END OF FOOTER EDI*/
