@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bryan Malpartida Chamber</title>
+        <link rel="stylesheet" href="styles/chamber.css">
+        <link rel="stylesheet" href="styles/chamber-large.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Parkinsans:wght@300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Parkinsans:wght@300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Luckiest+Guy&family=Oswald:wght@200..700&family=Parkinsans:wght@300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <meta name='description' content="Design and develop the a course home page using HTML, CSS AND JAVASCRIPT as a guide for the layout and content FOR THE COURSE WDD231">
+        <meta name="author" content="Bryan Malpartida">
+        <meta property="og:title" content="Bryan Malpartida Chamber">
+        <meta property="og:type" content="Home Page">
+        <meta property="og:image" content="https://www.caminosalkantay.com/blog/wp-content/uploads/2024/11/miraflores-lima-city-in-front-the-ocean-1024x767-1.jpg">
+        <meta property="og:url" content="https://bryanmalpartida.github.io/wdd231/index.html">
+        <meta property="og:description" content="	Design and develop the a course home page using HTML, CSS AND JAVASCRIPT as a guide for the layout and content FOR THE COURSE WDD231">
+        
+        <meta name="twitter:card" content="Home page for Bryan Malpartida Chamber Project">
+        <meta name="twitter:site" content="Bryan Malpartida">
+        <meta name="twitter:title" content="Bryan Malpartida Chamber">
+        <meta name="twitter:url" content="https://bryanmalpartida.github.io/wdd231/index.html">
+        <meta name="twitter:image" content="https://www.caminosalkantay.com/blog/wp-content/uploads/2024/11/miraflores-lima-city-in-front-the-ocean-1024x767-1.jpg">
+        <script src="scripts/chamber.js" defer></script>
+        <link rel="icon" href="images/favicon.ico">
+        
+    </head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/BryanMalpartida.jpg" alt="photo" class="photo">
+            <h1 id="navtitle">Bryan  Malpartida</h1>
+        </div>
+        
+        <nav>
+            <ul class="navigation">
+                <li><a href="https://bryanmalpartida.github.io/wdd231/index.html" title="Home">Home</a></li>
+                <li><a href="#" title="Chamber">Chamber</a></li>
+                <li><a href="https://www.linkedin.com/in/bryan-aaron-malpartida-trelles-0b00551a5/" title="LinkedIn">LinkedIn</a></li>
+                <li><a href="https://github.com/bryanmalpartida/wdd231" title="GitHub">GitHub</a></li>
+            </ul> 
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="left-sidebar"></div>
+
+    <main>
+        <h2 id="Header">Home Page</h2>
+        <div id="top-boxes">
+            <div id="course-work">
+                <h2>Course Work</h2>
+                <p id="course-description">Select a course to view its description and technology.</p>
+                <ul id="course-technology"></ul>
+            </div>
+            <div id="lima-peru">
+                <h2>Lima, Perú</h2>
+                <img src="images/lima.webp" alt="Lima, Perú">
+                <p>La costa verde</p>
+            </div>
+        </div>
+        <section id="certificate-section">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div id="filter-buttons">
+                <button id="all">All</button>
+                <button id="wdd">WDD</button>
+                <button id="cse">CSE</button>
+            </div>
+            <div id="courses-container"></div>
+            <p>Total Credits Required: <span id="total-credits">0</span></p>
+        </section>
+    </main>
+
+    <div class="right-sidebar"></div>
+
+
+    <footer>
+        <span id="year"></span> &copy; Bryan Malpartida Lima, Perú
+        <p></p>
+        <span id="lastModified"></span>      
+    </footer>
+
+</body>
+</html>

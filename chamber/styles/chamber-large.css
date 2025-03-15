@@ -1,0 +1,59 @@
+@media screen and (max-width: 768px){
+    
+/*HEAD2*/
+    h2{
+    display:flex;
+    justify-content: center; 
+    align-items: center; 
+    font-size:38px;
+    padding:30px;
+    }
+/*HAMBURGUER*/
+    .hamburger {
+        display: block; 
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity:0;}
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+/*NAV BAR*/
+    .navigation{
+        position:fixed;
+        left:-120%;
+        top:130px;
+        gap:0;
+        flex-direction:column;
+        background-color:rgb(9, 40, 61);
+        width:100%;
+        text-align:center;
+        justify-content: end;
+        transition:0.3s;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+        
+    }
+
+    .navigation.active{
+        left:0;
+
+    }
+
+    /*MAIN SECTION COURSE WORK AND LIMA PERÚ/*/
+    #top-boxes {
+        flex-direction: column;
+    }
+
+    /*CERTIFICATE BOX*/
+    #courses-container {
+        flex-direction: column;
+    }
+}
+
