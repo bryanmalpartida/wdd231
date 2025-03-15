@@ -33,9 +33,49 @@ year.innerHTML = `<span class="highlight">${today.getFullYear()}</span>`;
 const url= 'https://bryanmalpartida.github.io/wdd231/chamber/members.json';
 const cards = document.querySelector('#cards');
 
-async function getMembersData() {
+async function getMemberData() {
     const response = await fetch(url);
     const data = await response.json();
     displayMembers(data.members);
   }
+
+const displayMembers = (members) => {
+    members.forEach((member) => {
+
+        let card = document.createElement('section');
+        let name = document.createElement('h2'); 
+        let portrait = document.createElement('img');
+        let address = document.createElement('p');
+        let phonenumber = document.createElement('p');
+        let websiteurl = document.createElement('p');
+        let level = document.createElement('p');
+        let birthplace = document.createElement('p');
+
+         //text content//
+        name.textContent = `Name: ${member.name}`; 
+        address.textContent = `Address: ${member.address}`;
+        phonenumber.textContent = `Phone Number: ${member.phonenumber}`;
+        websiteurl.textContent = `Website: ${member.websiteurl}`;
+        level.textContent = `Level: ${member.url}`;
+        birthplace.textContent = `Place of Birth: ${member.birthplace}`;
+        
+
+        portrait.setAttribute('src', member.image);
+        portrait.setAttribute('alt', `Portrait of ${member.name} `);
+        portrait.setAttribute('loading', 'lazy');
+        portrait.setAttribute('width', '340');
+        portrait.setAttribute('height', '440');
+
+        card.appendChild(portrait);
+        card.appendChild(name);
+        card.appendChild(address);
+        card.appendChild(phonenumber);
+        card.appendChild(websiteurl);
+        card.appendChild(level);
+        card.appendChild(birthplace)
+        cards.appendChild(card);
+      }); 
+  }
+
+getMemberData();
 
