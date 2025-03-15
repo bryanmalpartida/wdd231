@@ -1,4 +1,4 @@
-@media screen and (max-width: 768px){
+@media screen and (max-width: 644px){
     
 /*HEAD2*/
     h2{
@@ -46,14 +46,5 @@
 
     }
 
-    /*MAIN SECTION COURSE WORK AND LIMA PERÚ/*/
-    #top-boxes {
-        flex-direction: column;
-    }
-
-    /*CERTIFICATE BOX*/
-    #courses-container {
-        flex-direction: column;
-    }
 }
 

@@ -30,7 +30,7 @@ year.innerHTML = `<span class="highlight">${today.getFullYear()}</span>`;
 
 
 //json//
-const url= 'https://bryanmalpartida.github.io/wdd231/chamber/members.json';
+const url= 'https://bryanmalpartida.github.io/wdd231/chamber/data/members.json';
 const cards = document.querySelector('#cards');
 
 async function getMemberData() {
@@ -56,7 +56,7 @@ const displayMembers = (members) => {
         address.textContent = `Address: ${member.address}`;
         phonenumber.textContent = `Phone Number: ${member.phonenumber}`;
         websiteurl.textContent = `Website: ${member.websiteurl}`;
-        level.textContent = `Level: ${member.url}`;
+        level.textContent = `Level: ${member.level}`;
         birthplace.textContent = `Place of Birth: ${member.birthplace}`;
         
 

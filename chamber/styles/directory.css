@@ -10,14 +10,18 @@ body {
 }
 
 header {
-    
     font-family: "Bebas Neue", serif; 
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center; 
     color: #ffffff;
-    background-color: #0f0d0d;
+    background-color: rgb(9, 40, 61);
     grid-column: 1 / 4;
-    
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.header-middle{
+  padding-right:100px;
 }
 
 
@@ -61,36 +65,33 @@ footer {
 }
 
 /*HEADER STUFF*/
-.header-content {
-    background-color: rgb(9, 40, 61);
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-}
+
 
 h1 {
-	text-align: center;
 	padding: 0.5rem;
 	color:#ffffff;
 }
 
 h2 {
     font-family: "Luckiest Guy", serif;
+    margin: 10px 0;
     
 }
 
 
 
 .photo {
-    width:100px;
+    width:150px;
     height:130px;
     border: 3px solid transparent; 
     border-radius: 10px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
     margin:10px;
+    margin-left:40px;
 }
 
 /*END OF HEADER/*
+
 
 /*NAVIGATION BAR*/
 
@@ -173,6 +174,31 @@ button:hover{
 /*END OF BUTTONS/*
 
 /*MAIN SECTION DETAILS*/
+
+p {
+    margin: 5px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+section {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
 /*END OF MAIN SECTION DETAILS/*
     
 

@@ -1,66 +1,66 @@
 {
     "members": [
       {
-        "name": "Joseph",
-        "address": "Smith",
-        "phonenumber": "23 December 1805",
-        "websiteurl": "27 June 1844",
+        "name": "Juan Perez",
+        "address": "123 17th street",
+        "phonenumber": "9346444453",
+        "websiteurl": "https://www.linkedin.com/in/bryan-aaron-malpartida-trelles-0b00551a5/",
+        "image": "https://img.freepik.com/premium-photo/professional-linkedin-profile-photo-young-man-suit-tie-smiling-confidently_1141323-1492.jpg",
+        "level": 3,
+        "birthplace": "Vermont"
+      },
+      {
+        "name": "Juan Perez",
+        "address": "123 17th street",
+        "phonenumber": "9346444453",
+        "websiteurl": "https://www.linkedin.com/in/bryan-aaron-malpartida-trelles-0b00551a5/",
         "image": "https://img.freepik.com/premium-photo/professional-linkedin-profile-photo-young-man-suit-tie-smiling-confidently_1141323-1492.jpg",
         "level": 1,
         "birthplace": "Vermont"
       },
       {
-        "name": "Joseph",
-        "address": "Smith",
-        "phonenumber": "23 December 1805",
-        "websiteurl": "27 June 1844",
+        "name": "Juan Perez",
+        "address": "123 17th street",
+        "phonenumber": "9346444453",
+        "websiteurl": "https://www.linkedin.com/in/bryan-aaron-malpartida-trelles-0b00551a5/",
         "image": "https://img.freepik.com/premium-photo/professional-linkedin-profile-photo-young-man-suit-tie-smiling-confidently_1141323-1492.jpg",
         "level": 1,
         "birthplace": "Vermont"
       },
       {
-        "name": "Joseph",
-        "address": "Smith",
-        "phonenumber": "23 December 1805",
-        "websiteurl": "27 June 1844",
+        "name": "Juan Perez",
+        "address": "123 17th street",
+        "phonenumber": "9346444453",
+        "websiteurl": "https://www.linkedin.com/in/bryan-aaron-malpartida-trelles-0b00551a5/",
+        "image": "https://img.freepik.com/premium-photo/professional-linkedin-profile-photo-young-man-suit-tie-smiling-confidently_1141323-1492.jpg",
+        "level": 2,
+        "birthplace": "Vermont"
+      },
+      {
+        "name": "Juan Perez",
+        "address": "123 17th street",
+        "phonenumber": "9346444453",
+        "websiteurl": "https://www.linkedin.com/in/bryan-aaron-malpartida-trelles-0b00551a5/",
         "image": "https://img.freepik.com/premium-photo/professional-linkedin-profile-photo-young-man-suit-tie-smiling-confidently_1141323-1492.jpg",
         "level": 1,
         "birthplace": "Vermont"
       },
       {
-        "name": "Joseph",
-        "address": "Smith",
-        "phonenumber": "23 December 1805",
-        "websiteurl": "27 June 1844",
+        "name": "Juan Perez",
+        "address": "123 17th street",
+        "phonenumber": "9346444453",
+        "websiteurl": "https://www.linkedin.com/in/bryan-aaron-malpartida-trelles-0b00551a5/",
         "image": "https://img.freepik.com/premium-photo/professional-linkedin-profile-photo-young-man-suit-tie-smiling-confidently_1141323-1492.jpg",
-        "level": 1,
+        "level": 3,
         "birthplace": "Vermont"
       },
       {
-        "name": "Joseph",
-        "address": "Smith",
-        "phonenumber": "23 December 1805",
-        "websiteurl": "27 June 1844",
+        "name": "Juan Perez",
+        "address": "123 17th street",
+        "phonenumber": "9346444453",
+        "websiteurl": "https://www.linkedin.com/in/bryan-aaron-malpartida-trelles-0b00551a5/",
         "image": "https://img.freepik.com/premium-photo/professional-linkedin-profile-photo-young-man-suit-tie-smiling-confidently_1141323-1492.jpg",
-        "level": 1,
-        "birthplace": "Vermont"
-      },
-      {
-        "name": "Joseph",
-        "address": "Smith",
-        "phonenumber": "23 December 1805",
-        "websiteurl": "27 June 1844",
-        "image": "https://img.freepik.com/premium-photo/professional-linkedin-profile-photo-young-man-suit-tie-smiling-confidently_1141323-1492.jpg",
-        "level": 1,
-        "birthplace": "Vermont"
-      },
-      {
-        "name": "Joseph",
-        "address": "Smith",
-        "phonenumber": "23 December 1805",
-        "websiteurl": "27 June 1844",
-        "image": "https://img.freepik.com/premium-photo/professional-linkedin-profile-photo-young-man-suit-tie-smiling-confidently_1141323-1492.jpg",
-        "level": 1,
+        "level": 2,
         "birthplace": "Vermont"
       }
       ]
