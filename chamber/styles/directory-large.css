@@ -1,13 +1,6 @@
 @media screen and (max-width: 644px){
     
-/*HEAD2*/
-    h2{
-    display:flex;
-    justify-content: center; 
-    align-items: center; 
-    font-size:38px;
-    padding:30px;
-    }
+ 
 /*HAMBURGUER*/
     .hamburger {
         display: block; 
@@ -45,6 +38,23 @@
         left:0;
 
     }
+/*CARDS LIST VIEW DISPLAY*/
+    #cards.list-view section {
+        width: 250px; 
+        margin: 0 auto;
+        font-size: small; 
+    }
+
+    #cards.list-view img {
+        width: 200px; 
+        height:200px;
+    }
+
+    #cards.list-view h2 {
+        font-size: 1.5rem;
+    }
 
 }
+
+    
 

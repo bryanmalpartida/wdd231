@@ -21,7 +21,7 @@ header {
 }
 
 .header-middle{
-  padding-right:100px;
+  padding-left:25px;
 }
 
 
@@ -68,14 +68,12 @@ footer {
 
 
 h1 {
-	padding: 0.5rem;
+	padding: 10px;
 	color:#ffffff;
 }
 
 h2 {
-    font-family: "Luckiest Guy", serif;
-    margin: 10px 0;
-    
+    font-family: "Luckiest Guy", serif; 
 }
 
 
@@ -157,45 +155,6 @@ nav {
 /*BUTTONS*/
 
 
-.grid-view {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-    gap: 20px; /* Spacing between cards */
-    padding: 20px;
-}
-
-
-.list-view {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; /* Spacing between list items */
-    padding: 20px;
-}
-
-
-section {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 16px;
-    background-color: #f9f9f9;
-    text-align: center;
-}
-
-
-.list-view section {
-    display: flex;
-    align-items: center;
-    text-align: left;
-}
-
-.list-view img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-right: 16px;
-}
-
-
 #toggle-view {
     padding: 10px 20px;
     background-color: #007bff;
@@ -206,7 +165,7 @@ section {
 }
 
 #toggle-view:hover {
-    background-color: #0056b3;
+    background-color: rgb(9, 40, 61);
 }
 
 /*END OF BUTTONS/*
@@ -224,12 +183,15 @@ img {
 }
 
 section {
-    border: 1px solid #ccc;
+    border: 1px solid #613f3f;
     border-radius: 8px;
     padding: 16px;
     background-color: #f9f9f9;
     text-align: center;
 }
+
+
+
 
 #cards {
     display: grid;
@@ -237,6 +199,17 @@ section {
     gap: 20px;
     padding: 20px;
 }
+
+#cards.list-view {
+    display: flex;
+    flex-direction: column; 
+}
+
+#cards.list-view section {
+    width: 1000px; 
+    margin: 0 auto; 
+}
+
 /*END OF MAIN SECTION DETAILS/*
     
 
@@ -266,6 +239,7 @@ section {
 .rightsvg {
     width: 48px; /* Set the width */
     height: 48px; /* Set the height */
+    padding:10px;
     transform: scale(1.5);
 }
 

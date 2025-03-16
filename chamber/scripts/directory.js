@@ -32,6 +32,8 @@ year.innerHTML = `<span class="highlight">${today.getFullYear()}</span>`;
 //json//
 const url= 'https://bryanmalpartida.github.io/wdd231/chamber/data/members.json';
 const cards = document.querySelector('#cards');
+const toggleButton = document.querySelector('#toggle-view');
+let isGridView = true;
 
 async function getMemberData() {
     const response = await fetch(url);
@@ -52,7 +54,7 @@ const displayMembers = (members) => {
         let birthplace = document.createElement('p');
 
          //text content//
-        name.textContent = `Name: ${member.name}`; 
+        name.textContent = `${member.name}`; 
         address.textContent = `Address: ${member.address}`;
         phonenumber.textContent = `Phone Number: ${member.phonenumber}`;
         websiteurl.textContent = `Website: ${member.websiteurl}`;
@@ -78,17 +80,17 @@ const displayMembers = (members) => {
   }
 
 // Toggle between grid and list views
-        toggleButton.addEventListener('click', () => {
-        if (isGridView) {
-        cards.classList.remove('grid-view');
-        cards.classList.add('list-view');
-        toggleButton.textContent = 'Switch to Grid View';
-         } else {
-        cards.classList.remove('list-view');
-        cards.classList.add('grid-view');
-        toggleButton.textContent = 'Switch to List View';
-         }
-         isGridView = !isGridView;
+toggleButton.addEventListener('click', () => {
+  if (isGridView) {
+    cards.classList.remove('grid-view');
+    cards.classList.add('list-view');
+    toggleButton.textContent = 'Switch to Grid View';
+  } else {
+    cards.classList.remove('list-view');
+    cards.classList.add('grid-view');
+    toggleButton.textContent = 'Switch to List View';
+  }
+  isGridView = !isGridView;
 });
 
 getMemberData();
