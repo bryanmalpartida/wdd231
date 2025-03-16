@@ -77,5 +77,19 @@ const displayMembers = (members) => {
       }); 
   }
 
+// Toggle between grid and list views
+        toggleButton.addEventListener('click', () => {
+        if (isGridView) {
+        cards.classList.remove('grid-view');
+        cards.classList.add('list-view');
+        toggleButton.textContent = 'Switch to Grid View';
+         } else {
+        cards.classList.remove('list-view');
+        cards.classList.add('grid-view');
+        toggleButton.textContent = 'Switch to List View';
+         }
+         isGridView = !isGridView;
+});
+
 getMemberData();
 
