@@ -157,7 +157,7 @@ nav {
 
 #toggle-view {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: rgb(9, 40, 61);
     color: white;
     border: none;
     border-radius: 5px;
@@ -165,7 +165,7 @@ nav {
 }
 
 #toggle-view:hover {
-    background-color: rgb(9, 40, 61);
+    background-color: rgb(19, 84, 128);
 }
 
 /*END OF BUTTONS/*
