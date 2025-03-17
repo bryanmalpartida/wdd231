@@ -12,7 +12,7 @@ body {
 header {
     font-family: "Bebas Neue", serif; 
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
     color: #ffffff;
     background-color: rgb(9, 40, 61);
     grid-column: 1 / 4;
