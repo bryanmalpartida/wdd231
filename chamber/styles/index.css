@@ -1,0 +1,295 @@
+/*STRUCTURE*/
+
+body {
+    display: grid;
+    height: 100vh;
+    grid-template: auto 1fr auto / 0.1fr 1.8fr 0.1fr;
+    font-family: "Roboto", serif;
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+}
+
+header {
+    font-family: "Bebas Neue", serif; 
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    background-color: rgb(9, 40, 61);
+    grid-column: 1 / 4;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.header-middle{
+  padding-left:25px;
+}
+
+
+
+.left-sidebar {
+    grid-column: 1 / 2;
+  }
+
+  main {
+    background-color: #ffffff;
+    color:rgb(9, 40, 61);
+    grid-column: 2 / 3;
+    width: 100%;
+    padding: 20px; 
+    box-sizing: border-box;
+     
+}
+
+
+.right-sidebar {
+    grid-column: 3 / 4;
+  }
+
+footer {
+    text-align: center;
+    color: #ffffff;
+    font-size: small;
+    padding:10px;
+    background-color: rgb(9, 40, 61);
+    grid-column: 1 / 4;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+
+.left-sidebar,
+.right-sidebar {
+    padding: 1rem;
+    color:#1A1A1A;
+    background: #ffffff;
+}
+
+/*HEADER STUFF*/
+
+
+h1 {
+	padding: 10px;
+	color:#ffffff;
+}
+
+h2 {
+    font-family: "Luckiest Guy", serif; 
+}
+
+.weather h3 {
+    color:white;
+    background-color: rgb(9, 40, 61);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding:15px;
+    margin:10px;
+    border-radius: 10px;
+    
+
+}
+
+
+
+.photo {
+    width:150px;
+    height:130px;
+    border: 3px solid transparent; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    margin:10px;
+    margin-left:40px;
+}
+
+/*END OF HEADER/*
+
+
+/*NAVIGATION BAR*/
+
+nav {
+    margin:0px;
+}
+
+
+
+#navtitle{
+    margin: auto 10px;
+}
+
+.navigation {
+    list-style: none;
+    display: flex;
+    font-size: x-large;
+    flex-wrap: wrap;
+	align-items: center;
+}
+.navigation li {
+	flex: 1 1 auto;
+}
+
+.navigation a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 1px 20px;  
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.navigation a:hover {
+    transform: scale(1.20);
+    color:rgb(40, 160, 240);
+}
+
+/*END OF NAVIGATION BAR*/
+
+/*HAMBURGUER*/
+
+
+.hamburger {
+    display: none; 
+    cursor: pointer;
+    position: absolute; 
+    right: 20px; 
+    top: 20px; 
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: #00BFFF;
+}
+
+/*END OF HAMBURGUER*/
+
+
+
+/*MAIN SECTION DETAILS*/
+
+/* Hero Section */
+.hero {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.hero-image {
+    width: 100%;
+    max-height: 400px;
+    border-radius: 8px;
+}
+
+.hero-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(9, 40, 61, 0.8);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    max-width: 50%;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #00BFFF;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #0080FF;
+}
+
+/* Current Events */
+.current-events {
+    margin-bottom: 2rem;
+}
+
+.event-card {
+    background-color: #f8f9fa;
+    border-left: 4px solid #00BFFF;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+/* Weather Section */
+.weather {
+    margin-bottom: 2rem;
+}
+
+.weather-container {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
+    gap: 1rem;
+}
+
+.current-weather, .weather-forecast {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.forecast-days {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+/* Business Spotlights */
+.business-spotlights {
+    margin-bottom: 2rem;
+}
+
+.spotlight-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.business-card {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/*END OF MAIN SECTION DETAILS/*
+    
+
+/*FOOTER*/
+
+/*FOOTER GRID STRUCTURE*/
+.footer-column {
+    padding: 5px;  
+}
+.left {
+    text-align: left; 
+}
+.middle {
+    text-align: center;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+.right {
+    text-align: right; 
+}
+
+/*FOOTER GRID STRUCTURE*/
+.leftsvg, 
+.middlesvg, 
+.rightsvg {
+    width: 48px; /* Set the width */
+    height: 48px; /* Set the height */
+    padding:5px;
+    transform: scale(1.5);
+}
+
+/*END OF FOOTER*/

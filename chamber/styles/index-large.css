@@ -1,0 +1,76 @@
+@media screen and (max-width: 644px){
+    
+ 
+    /*HAMBURGUER*/
+        .hamburger {
+            display: block; 
+        }
+    
+        .hamburger.active .bar:nth-child(2){
+            opacity:0;}
+    
+        .hamburger.active .bar:nth-child(1){
+            transform: translateY(8px) rotate(45deg);
+        }
+        .hamburger.active .bar:nth-child(3){
+            transform: translateY(-8px) rotate(-45deg);
+        }
+    /*NAV BAR*/
+        .navigation{
+            position:fixed;
+            left:-120%;
+            top:130px;
+            gap:0;
+            flex-direction:column;
+            background-color:rgb(9, 40, 61);
+            width:100%;
+            text-align:center;
+            justify-content: end;
+            transition:0.3s;
+        }
+    
+        .nav-item{
+            margin: 16px 0;
+            
+        }
+    
+        .navigation.active{
+            left:0;
+    
+        }
+        /*main section*/
+        .hero-content {
+            position: static;
+            max-width: 100%;
+            margin-top: 1rem;
+        }
+        
+        .weather-container {
+            grid-template-columns: 1fr;
+        }
+        
+        .forecast-days {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    @media screen and (max-width: 488px) {
+        body {
+            grid-template-columns: 1fr; 
+        }
+    
+        header,
+        footer {
+            grid-column: 1 / -1; 
+        }
+    
+        .left-sidebar,
+        .right-sidebar {
+            display: none; 
+        }
+    
+        main {
+            grid-column: 1 / -1; 
+            padding: 10px; 
+        } 
+}
