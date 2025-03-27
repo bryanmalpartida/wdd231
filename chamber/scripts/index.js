@@ -83,6 +83,8 @@ function displayForecast(data) {
     dailyForecasts.forEach(forecast => {
         const date = new Date(forecast.dt * 1000);
         const dayName = date.toLocaleDateString('en-US', { weekday: 'short' });
+        const capitalizedDesc = forecast.weather[0].description
+            .split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
         
         const dayElement = document.createElement('div');
         dayElement.className = 'forecast-day';
@@ -90,7 +92,7 @@ function displayForecast(data) {
             <p class="day-name">${dayName}</p>
             <img src="https://openweathermap.org/img/wn/${forecast.weather[0].icon}.png" alt="${forecast.weather[0].main}">
             <p class="forecast-temp">${Math.round(forecast.main.temp)}°F</p>
-            <p class="forecast-desc">${forecast.weather[0].description}</p>
+            <p class="forecast-desc">${capitalizedDesc}</p>
         `;
         forecastContainer.appendChild(dayElement);
     });
