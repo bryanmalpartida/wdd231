@@ -38,10 +38,10 @@
         </div>
         <nav>
             <ul class="navigation">
-                <li><a href="https://bryanmalpartida.github.io/wdd231/chamber/home.html" title="Home">Home</a></li>
+                <li><a href="https://bryanmalpartida.github.io/wdd231/chamber/index.html" title="Home">Home</a></li>
                 <li><a href="https://bryanmalpartida.github.io/wdd231/chamber/directory.html" title="Directory">Directory</a></li>
                 <li><a href="https://bryanmalpartida.github.io/wdd231/chamber/join.html" title="Join">Join</a></li>
-                <li><a href="https://bryanmalpartida.github.io/wdd231/chamber/Discover.html" title="Discover">Discover</a></li>
+                <li><a href="https://bryanmalpartida.github.io/wdd231/chamber/discover.html" title="Discover">Discover</a></li>
             </ul> 
             <div class="hamburger">
                 <span class="bar"></span>
@@ -54,29 +54,24 @@
     <div class="left-sidebar"></div>
 
     <main>
-        <!-- Hero Section -->
         <section class="hero">
             <img src="images/ccl.webp" alt="City skyline or community gathering" class="hero-image">
             <div class="hero-content">
-                <h2>Welcome to Timbuktu Chamber of Commerce</h2>
+                <h2>Welcome to Lima Chamber of Commerce</h2>
                 <a href="join.html" class="cta-button">Join Our Chamber</a>
             </div>
         </section>
-    
-     
-    
-        <!-- Weather Section -->
-        <section class="weather">
-            <h2>Local Weather</h2>
+        <section class="weather-section">
+            <h2>Home</h2>
             <div class="weather-container">
                 <div class="current-weather">
                     <h3>Events</h3>
                 </div>
                 <div class="current-weather">
                     <h3>Current Conditions</h3>
-                    <div id="weather-icon"></div>
-                    <p id="current-temp"></p>
-                    <p id="weather-desc"></p>
+                    <div class="weather-icon" id="weather-icon"></div>
+                    <p id="current-temp">--°F</p>
+                    <p id="weather-desc">Loading weather...</p>
                 </div>
                 <div class="weather-forecast">
                     <h3>3-Day Forecast</h3>
@@ -84,26 +79,9 @@
                 </div>
             </div>
         </section>
-    
-        <!-- Business Spotlights -->
         <section class="business-spotlights">
-            <div class="spotlight-container">
-                <div class="business-card">
-                    <h3>Desert Sands Trading Co.</h3>
-                    <p>Specializing in authentic Malian crafts and textiles since 1985</p>
-                    <p>Contact: info@desertsands.ml</p>
-                </div>
-                <div class="business-card">
-                    <h3>Timbuktu Tours</h3>
-                    <p>Experience the rich history of our city with expert guides</p>
-                    <p>Contact: tours@timbuktu.ml</p>
-                </div>
-                <div class="business-card">
-                    <h3>Niger River Logistics</h3>
-                    <p>Your trusted partner for regional shipping and transport</p>
-                    <p>Contact: shipping@nigerlogistics.ml</p>
-                </div>
-            </div>
+          <div class="spotlight-container" id="spotlight-container">
+          </div>
         </section>
     </main>
 
@@ -112,11 +90,10 @@
 
     <footer>
         <div class="footer-column left">
-            <p><strong>Timbuktu Chamber of Commerce</strong></p>
-            <p>10 Rue De La Paix</p>
-            <p>Timbuktu, Mali 999</p>
-            <p>info@timbuktucc.org</p>
-            <p>(223)555-2300</p>
+            <p><strong>Lima Chamber of Commerce</strong></p>
+            <p>Av. Giuseppe Garibaldi 396, Jesús María 15072</p>
+            <p>info@limacc.org</p>
+            <p>(01) 4633434</p>
         </div>
         <div class="footer-column middle">
             <svg class="leftsvg" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
@@ -133,7 +110,7 @@
         <div class="footer-column right">
             <p>WDD231 Class Project</p>
             <p>Bryan Malpartida</p>
-            <p>&copy; <span id="year"></span> Timbuktu Chamber of Commerce</p>
+            <p>&copy; <span id="year"></span> Lima Chamber of Commerce</p>
             <span id="lastModified"></span>
         </div>
     </footer>

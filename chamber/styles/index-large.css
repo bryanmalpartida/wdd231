@@ -52,6 +52,15 @@
         .forecast-days {
             grid-template-columns: 1fr;
         }
+
+        .columns-container {
+            flex-wrap: wrap;
+        }
+        
+        .member-column {
+            flex: 1 0 calc(50% - 1rem);
+        }
+    
     }
     
     @media screen and (max-width: 488px) {
@@ -73,4 +82,8 @@
             grid-column: 1 / -1; 
             padding: 10px; 
         } 
+
+        .member-column {
+            flex: 1 0 100%;
+        }  
 }
