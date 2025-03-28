@@ -31,20 +31,24 @@ year.innerHTML = `<span class="highlight">${today.getFullYear()}</span>`;
 
 // WEATHER API
 const weatherApiKey = '3b7e2ed5452c2561882dce5c3d0ef5e7';
+
+//HELP CAPITALIZE WORDS
 function capitalizeWords(str) {
     return str.replace(/\b\w/g, char => char.toUpperCase());
 } 
-const chamberLocation = { lat: -12.0464, lon: -77.0428 }; 
+//END OF CAPITALIZE WORDS
+
+const chamberLocation = { lat: -12.0464, lon: -77.0428 }; //LIMA COORDENATES
 
 async function fetchWeatherData() {
     try {
-        // Fetch current weather
+        // CURRENT WEATHER
         const currentResponse = await fetch(
             `https://api.openweathermap.org/data/2.5/weather?lat=${chamberLocation.lat}&lon=${chamberLocation.lon}&units=imperial&appid=${weatherApiKey}`
         );
         const currentData = await currentResponse.json();
 
-        // Fetch 3-day forecast
+        // 3 DAY FORECAST
         const forecastResponse = await fetch(
             `https://api.openweathermap.org/data/2.5/forecast?lat=${chamberLocation.lat}&lon=${chamberLocation.lon}&units=imperial&cnt=24&appid=${weatherApiKey}`
         );
@@ -99,7 +103,7 @@ function displayForecast(data) {
 }
 
 document.addEventListener('DOMContentLoaded', fetchWeatherData);
-
+//END OF WEATHER SECTION
 
 
 //SPOTLIGHT
@@ -181,6 +185,7 @@ const displaySpotlights = (members) => {
     
     spotlightContainer.appendChild(columnsContainer);
 };
+//END OF SPOTLIGHT 
 
 // Helper functions
 function formatPhoneNumber(phone) {
