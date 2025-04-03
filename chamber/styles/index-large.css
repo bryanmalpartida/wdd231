@@ -27,6 +27,7 @@
             text-align:center;
             justify-content: end;
             transition:0.3s;
+            z-index: 1000;
         }
     
         .nav-item{
