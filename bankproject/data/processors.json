@@ -1,0 +1,62 @@
+[
+    {
+        "name": "María Rodríguez",
+        "email": "maria.rodriguez@callaobank.com",
+        "phone": "+51 987 654 321",
+        "image": "maria.jpg"
+    },
+    {
+        "name": "Carlos Gutiérrez",
+        "email": "carlos.gutierrez@callaobank.com",
+        "phone": "+51 987 654 322",
+        "image": "carlos.jpg"
+    },
+    {
+        "name": "Lucía Fernández",
+        "email": "lucia.fernandez@callaobank.com",
+        "phone": "+51 987 654 323",
+        "image": "lucia.jpg"
+    },
+    {
+        "name": "Jorge Martínez",
+        "email": "jorge.martinez@callaobank.com",
+        "phone": "+51 987 654 324",
+        "image": "jorge.jpg"
+    },
+    {
+        "name": "Ana Vargas",
+        "email": "ana.vargas@callaobank.com",
+        "phone": "+51 987 654 325",
+        "image": "ana.jpg"
+    },
+    {
+        "name": "Pedro Castillo",
+        "email": "pedro.castillo@callaobank.com",
+        "phone": "+51 987 654 326",
+        "image": "pedro.jpg"
+    },
+    {
+        "name": "Sofía Quispe",
+        "email": "sofia.quispe@callaobank.com",
+        "phone": "+51 987 654 327",
+        "image": "sofia.jpg"
+    },
+    {
+        "name": "Miguel Torres",
+        "email": "miguel.torres@callaobank.com",
+        "phone": "+51 987 654 328",
+        "image": "miguel.jpg"
+    },
+    {
+        "name": "Elena Mendoza",
+        "email": "elena.mendoza@callaobank.com",
+        "phone": "+51 987 654 329",
+        "image": "elena.jpg"
+    },
+    {
+        "name": "Raúl Herrera",
+        "email": "raul.herrera@callaobank.com",
+        "phone": "+51 987 654 330",
+        "image": "raul.jpg"
+    }
+]

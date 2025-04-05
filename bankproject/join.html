@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join CallaoBank - Open Your Account Today</title>
+    <meta name="description" content="Register with CallaoBank to access our financial services including savings accounts, checking accounts, fixed-term deposits, and loans.">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/logo.png" alt="CallaoBank Logo" class="logo">
+            <h1 id="navtitle">CallaoBank</h1>
+        </div>
+        
+        <nav>
+            <ul class="navigation">
+                <li><a href="index.html" title="Home">Home</a></li>
+                <li><a href="services.html" title="Services">Services</a></li>
+                <li><a href="join.html" title="Join Us">Join Us</a></li>
+            </ul> 
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="registration-form">
+            <h2>Join CallaoBank Today</h2>
+            <form id="registrationForm" action="formaction.html" method="get">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                    
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    
+                    <label for="idNumber">ID Number:</label>
+                    <input type="text" id="idNumber" name="idNumber" required>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Services of Interest</legend>
+                    <label><input type="checkbox" name="services" value="savings"> Savings Account</label>
+                    <label><input type="checkbox" name="services" value="checking"> Checking Account</label>
+                    <label><input type="checkbox" name="services" value="deposits"> Fixed-Term Deposits</label>
+                    <label><input type="checkbox" name="services" value="personal-loan"> Personal Loan</label>
+                    <label><input type="checkbox" name="services" value="business-loan"> Business Loan</label>
+                </fieldset>
+                
+                <button type="submit">Submit Registration</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <span id="year"></span> &copy; CallaoBank - Callao, Perú
+        <p></p>
+        <span id="lastModified"></span>
+        <p><a href="attributions.html">Attributions</a></p>
+    </footer>
+    
+    <script src="scripts/formhandler.js" type="module"></script>
+</body>
+</html>

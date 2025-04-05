@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - CallaoBank</title>
+    <meta name="description" content="Explore CallaoBank's financial services including savings accounts, checking accounts, fixed-term deposits, and personal/business loans.">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/logo.png" alt="CallaoBank Logo" class="logo">
+            <h1 id="navtitle">CallaoBank</h1>
+        </div>
+        
+        <nav>
+            <ul class="navigation">
+                <li><a href="index.html" title="Home">Home</a></li>
+                <li><a href="services.html" title="Services">Services</a></li>
+                <li><a href="join.html" title="Join Us">Join Us</a></li>
+            </ul> 
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="bank-services">
+            <h2>Our Banking Services</h2>
+            
+            <div class="service">
+                <img src="images/savings.jpg" alt="Savings Account" loading="lazy">
+                <div class="service-info">
+                    <h3>Savings Accounts</h3>
+                    <p>Start saving for your future with our competitive interest rates and no hidden fees. Our savings accounts help you grow your money while keeping it accessible.</p>
+                </div>
+            </div>
+            
+            <div class="service">
+                <img src="images/checking.jpg" alt="Checking Account" loading="lazy">
+                <div class="service-info">
+                    <h3>Checking Accounts</h3>
+                    <p>Manage your daily finances with ease. Our checking accounts come with debit cards, online banking, and mobile check deposit.</p>
+                </div>
+            </div>
+            
+            <div class="service">
+                <img src="images/deposits.jpg" alt="Fixed-Term Deposits" loading="lazy">
+                <div class="service-info">
+                    <h3>Fixed-Term Deposits</h3>
+                    <p>Earn higher interest by locking in your funds for a set period. Terms from 30 days to 5 years available with competitive rates.</p>
+                </div>
+            </div>
+            
+            <div class="service">
+                <img src="images/loans.jpg" alt="Loans" loading="lazy">
+                <div class="service-info">
+                    <h3>Personal & Business Loans</h3>
+                    <p>Whether you need funds for personal expenses or to grow your business, we offer flexible loan options with competitive rates.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="loan-processors">
+            <h2>Our Loan Processors</h2>
+            <div id="processorsContainer" class="processors-grid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <span id="year"></span> &copy; CallaoBank - Callao, Perú
+        <p></p>
+        <span id="lastModified"></span>
+        <p><a href="attributions.html">Attributions</a></p>
+    </footer>
+    
+    <script src="scripts/loanprocessors.js" type="module"></script>
+</body>
+</html>
