@@ -71,7 +71,7 @@ function setupFormHandler() {
     const form = document.getElementById('registrationForm');
     if (!form) return;
 
-    form.addEventListener('submit', function(e) {
+    form.addEventListener('submit', async function(e) {
         e.preventDefault();
         
         // Store form data
@@ -86,22 +86,36 @@ function setupFormHandler() {
         
         localStorage.setItem('registrationData', JSON.stringify(formData));
         
-        // For demo purposes, we'll use a sample processor
-        const sampleProcessor = {
-            name: "María Rodríguez",
-            email: "maria.rodriguez@callaobank.com",
-            phone: "+51 987 654 321"
-        };
-        
-        displayModal(
-            'Registration Complete', 
-            `Thank you for registering with CallaoBank! Our loan processor ${sampleProcessor.name} will contact you soon at ${sampleProcessor.email} or ${sampleProcessor.phone}.`
-        );
-        
-        // Redirect after modal is closed
-        setTimeout(() => {
-            window.location.href = 'formaction.html';
-        }, 3000);
+        try {
+            // Fetch processors data
+            const response = await fetch('./data/processors.json');
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const processors = await response.json();
+            
+            // Select random processor
+            const randomProcessor = processors[Math.floor(Math.random() * processors.length)];
+            
+            displayModal(
+                'Registration Complete', 
+                `Thank you for registering with CallaoBank! Our loan processor ${randomProcessor.name} will contact you soon at ${randomProcessor.email} or ${randomProcessor.phone}.`
+            );
+            
+            // Redirect after modal is closed
+            setTimeout(() => {
+                window.location.href = 'formaction.html';
+            }, 3000);
+        } catch (error) {
+            console.error('Error fetching processors:', error);
+            displayModal(
+                'Registration Complete', 
+                'Thank you for registering with CallaoBank! A loan processor will contact you soon.'
+            );
+            setTimeout(() => {
+                window.location.href = 'formaction.html';
+            }, 3000);
+        }
     });
 }
 
@@ -110,27 +124,27 @@ function setupFormHandler() {
 // ==============================================
 
 async function fetchAndDisplayLoanProcessors() {
-    try {
-        // Sample data - in a real app you would fetch this from JSON
-        const processors = [
-            {
-                "name": "María Rodríguez",
-                "email": "maria.rodriguez@callaobank.com",
-                "phone": "+51 987 654 321",
-                "image": "https://img.freepik.com/premium-photo/professional-linkedin-profile-photo-young-man-suit-tie-smiling-confidently_1141323-1492.jpg"
-            },
-            {
-                "name": "Carlos Gutiérrez",
-                "email": "carlos.gutierrez@callaobank.com",
-                "phone": "+51 987 654 322",
-                "image": "https://img.freepik.com/premium-photo/professional-linkedin-profile-photo-young-man-suit-tie-smiling-confidently_1141323-1492.jpg"
-            },
-            // Add more processors as needed
-        ];
+    const container = document.getElementById('processorsContainer');
+    if (!container) return;
 
+    // Show loading state
+    container.innerHTML = '<div class="loading">Loading loan processors...</div>';
+
+    try {
+        const response = await fetch('./data/processors.json');
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const processors = await response.json();
+        
+        if (!Array.isArray(processors) || processors.length === 0) {
+            throw new Error('No processors data available');
+        }
+        
         displayProcessors(processors);
     } catch (error) {
-        console.error('Error with loan processors:', error);
+        console.error('Error fetching loan processors:', error);
+        container.innerHTML = '<div class="error">Failed to load loan processors. Please try again later.</div>';
         displayModal('Error', 'Could not load loan processors. Please try again later.');
     }
 }
