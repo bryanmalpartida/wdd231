@@ -81,11 +81,38 @@ function setupFormHandler() {
             email: document.getElementById('email').value,
             phone: document.getElementById('phone').value,
             idNumber: document.getElementById('idNumber').value,
-            services: Array.from(document.querySelectorAll('input[name="services"]:checked')).map(el => el.value)
+            services: Array.from(document.querySelectorAll('input[name="services"]:checked')).map(el => el.value),
+            submissionDate: new Date().toLocaleString()
         };
         
+        // 1. Save to localStorage
         localStorage.setItem('registrationData', JSON.stringify(formData));
         
+        // 2. Create and download text file
+        const textFileContent = `CallaoBank Client Information\n\n` +
+                              `First Name: ${formData.firstName}\n` +
+                              `Last Name: ${formData.lastName}\n` +
+                              `Email: ${formData.email}\n` +
+                              `Phone: ${formData.phone}\n` +
+                              `ID Number: ${formData.idNumber}\n` +
+                              `Services Interested In: ${formData.services.join(', ')}\n` +
+                              `Submission Date: ${formData.submissionDate}\n\n` +
+                              `This information has been saved for our records.`;
+        
+        const blob = new Blob([textFileContent], { type: 'text/plain' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'clientinfo.txt';
+        document.body.appendChild(a);
+        a.click();
+        
+        // Clean up
+        setTimeout(() => {
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }, 100);
+
         try {
             // Fetch processors data
             const response = await fetch('./data/processors.json');
@@ -104,7 +131,7 @@ function setupFormHandler() {
             
             // Redirect after modal is closed
             setTimeout(() => {
-                window.location.href = 'formaction.html';
+                window.location.href = 'https://bryanmalpartida.github.io/wdd231/bankproject/services.html';
             }, 3000);
         } catch (error) {
             console.error('Error fetching processors:', error);
@@ -113,7 +140,7 @@ function setupFormHandler() {
                 'Thank you for registering with CallaoBank! A loan processor will contact you soon.'
             );
             setTimeout(() => {
-                window.location.href = 'formaction.html';
+                window.location.href = 'https://bryanmalpartida.github.io/wdd231/bankproject/services.html';
             }, 3000);
         }
     });
