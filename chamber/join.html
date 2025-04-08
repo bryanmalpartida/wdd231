@@ -54,35 +54,162 @@
     <div class="left-sidebar"></div>
 
     <main>
-        <section class="hero">
-            <img src="https://portal.andina.pe/EDPfotografia/Thumbnail/2013/03/24/000206252W.jpg" alt="City skyline or community gathering" class="hero-image">
-            <div class="hero-content">
-                <h2>Welcome to Lima Chamber of Commerce</h2>
-                <a href="join.html" class="cta-button">Join Our Chamber</a>
+        <div class="container">
+            <div class="form-container">
+                <h1>Membership Application</h1>
+                <form method="get" action="thankyou.html">
+                    <label class="required">
+                        First Name:
+                        <input type="text" name="firstname" title="Please enter your first name" autocomplete="given-name" required>
+                    </label>
+                    
+                    <label class="required">
+                        Last Name:
+                        <input type="text" name="lastname" title="Please enter your last name" autocomplete="family-name" required>
+                    </label>
+                    
+                    <label>
+                        Organizational Title:
+                        <input type="text" name="orgtitle" title="Please enter your organizational title" autocomplete="organization-title" 
+                               pattern="[A-Za-z \-]{7,}" 
+                               title="Only letters, hyphens, and spaces allowed (minimum 7 characters)">
+                    </label>
+                    
+                    <label class="required">
+                        Email:
+                        <input type="email" name="email" title="Please enter your email address" autocomplete="email" 
+                               placeholder="example@domain.com" required>
+                    </label>
+                    
+                    <label class="required">
+                        Mobile Phone:
+                        <input type="tel" name="phone" title="Please enter your mobile phone number" autocomplete="tel" required>
+                    </label>
+                    
+                    <label class="required">
+                        Business/Organization Name:
+                        <input type="text" name="orgname" title="Please enter your organization name" autocomplete="organization" required>
+                    </label>
+                    
+                    <label class="required">
+                        Membership Level:
+                        <select name="membership" title="Please select a membership level" required>
+                            <option value="">-- Select a Membership Level --</option>
+                            <option value="np">NP Membership (Non-Profit - No Fee)</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
+                    
+                    <label>
+                        Business/Organization Description:
+                        <textarea name="description" title="Please describe your business or organization"></textarea>
+                    </label>
+                    
+                    <input type="hidden" name="timestamp" id="timestamp">
+                    
+                    <input type="submit" value="Submit Application">
+                </form>
             </div>
-        </section>
-        <section class="weather-section">
-            <h2>Home</h2>
-            <div class="weather-container">
-                <div class="current-weather">
-                    <h3>Events</h3>
+            
+            <div class="cards-container">
+                <div class="card">
+                    <h3>NP Membership</h3>
+                    <p>For non-profit organizations with no fee.</p>
+                    <a href="#npModal" class="modal-link">Learn about benefits</a>
                 </div>
-                <div class="current-weather">
-                    <h3>Current Conditions</h3>
-                    <div class="weather-icon" id="weather-icon"></div>
-                    <p id="current-temp">--°F</p>
-                    <p id="weather-desc">Loading weather...</p>
+                
+                <div class="card">
+                    <h3>Bronze Membership</h3>
+                    <p>Entry-level membership with basic benefits.</p>
+                    <a href="#bronzeModal" class="modal-link">Learn about benefits</a>
                 </div>
-                <div class="weather-forecast">
-                    <h3>3-Day Forecast</h3>
-                    <div class="forecast-days" id="forecast-container"></div>
+                
+                <div class="card">
+                    <h3>Silver Membership</h3>
+                    <p>Mid-level membership with enhanced benefits.</p>
+                    <a href="#silverModal" class="modal-link">Learn about benefits</a>
+                </div>
+                
+                <div class="card">
+                    <h3>Gold Membership</h3>
+                    <p>Premium membership with all benefits included.</p>
+                    <a href="#goldModal" class="modal-link">Learn about benefits</a>
                 </div>
             </div>
-        </section>
-        <section class="business-spotlights">
-          <div class="spotlight-container" id="spotlight-container">
-          </div>
-        </section>
+        </div>
+        
+        <!-- NP Membership Modal -->
+        <div id="npModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>NP Membership Benefits</h2>
+                <p><strong>Cost:</strong> Free for qualified non-profit organizations</p>
+                <ul>
+                    <li>Listing in our non-profit directory</li>
+                    <li>Access to basic training resources</li>
+                    <li>Monthly newsletter</li>
+                    <li>Invitation to annual non-profit networking event</li>
+                    <li>10% discount on all paid events</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Bronze Membership Modal -->
+        <div id="bronzeModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Bronze Membership Benefits</h2>
+                <p><strong>Cost:</strong> $250/year</p>
+                <ul>
+                    <li>All NP Membership benefits</li>
+                    <li>Business listing in our online directory</li>
+                    <li>Access to premium training resources</li>
+                    <li>Quarterly networking events</li>
+                    <li>15% discount on all paid events</li>
+                    <li>Featured in our newsletter once per year</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Silver Membership Modal -->
+        <div id="silverModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Silver Membership Benefits</h2>
+                <p><strong>Cost:</strong> $500/year</p>
+                <ul>
+                    <li>All Bronze Membership benefits</li>
+                    <li>Priority listing in our online directory</li>
+                    <li>Access to exclusive training workshops</li>
+                    <li>Monthly networking events</li>
+                    <li>20% discount on all paid events</li>
+                    <li>Featured in our newsletter quarterly</li>
+                    <li>One spotlight position on our homepage per year</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Gold Membership Modal -->
+        <div id="goldModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Gold Membership Benefits</h2>
+                <p><strong>Cost:</strong> $1,000/year</p>
+                <ul>
+                    <li>All Silver Membership benefits</li>
+                    <li>Top placement in our online directory</li>
+                    <li>VIP access to all training and workshops</li>
+                    <li>Exclusive invitation-only events</li>
+                    <li>25% discount on all paid events</li>
+                    <li>Monthly feature in our newsletter</li>
+                    <li>Quarterly spotlight position on our homepage</li>
+                    <li>Dedicated account manager</li>
+                    <li>Complimentary tickets to our annual gala</li>
+                </ul>
+            </div>
+        </div>
     </main>
 
     <div class="right-sidebar"></div>

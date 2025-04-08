@@ -88,6 +88,45 @@ footer {
 
 /*END OF HAMBURGUER*/
 
+/*NAVIGATION BAR*/
+
+nav {
+    margin:0px;
+}
+
+
+
+#navtitle{
+    margin: auto 10px;
+}
+
+.navigation {
+    list-style: none;
+    display: flex;
+    font-size: x-large;
+    flex-wrap: wrap;
+	align-items: center;
+}
+.navigation li {
+	flex: 1 1 auto;
+}
+
+.navigation a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 1px 20px;  
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.navigation a:hover {
+    transform: scale(1.20);
+    color:rgb(40, 160, 240);
+}
+
+/*END OF NAVIGATION BAR*/
+
 /*FOOTER*/
 
 /*FOOTER GRID STRUCTURE*/
