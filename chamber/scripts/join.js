@@ -28,10 +28,10 @@ const today = new Date();
 //print
 year.innerHTML = `<span class="highlight">${today.getFullYear()}</span>`;
 
-// Set the timestamp when the page loads
+// TIMESTAMP
 document.getElementById('timestamp').value = new Date().toISOString();
         
-// Modal functionality
+// MODALS
 const modals = document.querySelectorAll('.modal');
 const modalLinks = document.querySelectorAll('.modal-link');
 const closeButtons = document.querySelectorAll('.close');
