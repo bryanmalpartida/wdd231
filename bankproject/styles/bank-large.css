@@ -1,18 +1,50 @@
-/* Responsive Design */
+
 @media (max-width: 768px) {
+    /*HAMBURGUER*/
     .hamburger {
         display: block;
     }
 
     .navigation {
-        display: none;
+        position: absolute;
+        top: 80px; 
+        left: 0;
         width: 100%;
+        background-color: var(--primary-color);
+        display: none;
         flex-direction: column;
         padding: 1rem 0;
+        z-index: 100;
     }
+    
 
     .navigation.active {
         display: flex;
+    }
+
+    .navigation li {
+        text-align: center;
+        padding: 0.5rem 0;
+    }
+
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background-color: var(--light-text);
     }
 
     .service {
@@ -21,6 +53,15 @@
 
     .hero h2 {
         font-size: 2rem;
+    }
+
+    .about-content {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .about-image {
+        max-height: 500px;
     }
     
 }

@@ -1,10 +1,11 @@
-/* Base Styles */
+/* BASE STYLES */
 :root {
-    --primary-color: rgb(9, 40, 61);
-    --secondary-color: rgb(40, 160, 240);
+    --primary-color: #1A4B7D;
+    --secondary-color: #6EC1E4;
     --text-color: #333;
     --light-text: #ffffff;
     --background-color: #f5f5f5;
+    
 }
 
 * {
@@ -23,7 +24,7 @@ body {
     flex-direction: column;
 }
 
-/* Header Styles */
+/* HEADER */
 header {
     font-family: "Bebas Neue", serif; 
     justify-content: space-between;
@@ -52,7 +53,7 @@ header {
     font-size: 1.8rem;
 }
 
-/* Navigation */
+/* NAVIGATION */
 nav {
     margin: 0;
 }
@@ -79,10 +80,13 @@ nav {
     transform: scale(1.05);
 }
 
-/* Hamburger Menu */
+/* HAMBURGER */
 .hamburger {
-    display: none;
+    display: none; 
     cursor: pointer;
+    position: absolute; 
+    right: 20px; 
+    top: 20px; 
 }
 
 .bar {
@@ -91,10 +95,10 @@ nav {
     height: 3px;
     margin: 5px auto;
     transition: all 0.3s ease-in-out;
-    background-color: var(--secondary-color);
+    background-color: #00BFFF;
 }
 
-/* Main Content */
+/* MAIN CONTENT */
 main {
     flex: 1;
     padding: 2rem;
@@ -135,6 +139,81 @@ main {
     background-color: darken(var(--secondary-color), 10%);
 }
 
+/* ABOUT */
+.about {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 1.5rem 0;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-image {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.about-image img {
+    width: 100%;
+    height: 400px;
+    
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.02);
+}
+
+.achievements {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.achievement-item {
+    text-align: center;
+    padding: 1rem;
+    min-width: 120px;
+    
+}
+
+.achievement-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1;
+    
+}
+
+
+
+.achievement-label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.location {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
 .map-container {
     margin: 2rem 0;
     border-radius: 8px;
@@ -155,7 +234,7 @@ main {
     padding: 5px;
   }
 
-/* Services Section */
+/* SERVICES */
 .service {
     display: flex;
     flex-direction: column;
@@ -174,7 +253,7 @@ main {
     object-fit: cover;
 }
 
-/* Loan Processors */
+/* LOAN PROCESSORS*/
 
 .loading, .error {
     text-align: center;
@@ -188,7 +267,7 @@ main {
 }
 
 .error {
-    color: #d32f2f; /* Red color for errors */
+    color: #d32f2f; 
 }
 .processors-grid {
     display: grid;
@@ -230,7 +309,7 @@ main {
     background-color: darken(var(--secondary-color), 10%);
 }
 
-/* Form Styles */
+/*FORM */
 .registration-form {
     max-width: 600px;
     margin: 0 auto;
@@ -293,7 +372,7 @@ button[type="submit"]:hover {
     background-color: darken(var(--secondary-color), 10%);
 }
 
-/* Modal Styles */
+/*MODAL */
 .modal {
     position: fixed;
     top: 0;
@@ -331,7 +410,7 @@ button[type="submit"]:hover {
     margin-top: 1rem;
 }
 
-/* Footer */
+/* FOOTER */
 footer {
     text-align: center;
     color: var(--light-text);

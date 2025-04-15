@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CallaoBank - Your Local Banking Partner</title>
+    <title>CallaoBank - A bank made in Callao</title>
     <meta name="description" content="CallaoBank provides accessible banking services to the people of Callao, Perú. Savings accounts, checking accounts, fixed-term deposits, and loans for personal and business use.">
     <link rel="stylesheet" href="styles/bank.css">
     <link rel="stylesheet" href="styles/bank-large.css">
     <link rel="icon" href="images/favicon.ico">
-    <script src="scripts/bank.js"></script>
+    <script src="/scripts/bank.js"></script>
    
 </head>
 <body>
@@ -39,18 +39,42 @@
             <a href="https://bryanmalpartida.github.io/wdd231/bankproject/join.html" class="cta-button">Open Your Account</a>
         </section>
 
-        <section class="about">
-            <h2>About Us</h2>
+       <section class="about">
+    <h2>About Us</h2>
+    <div class="about-content">
+        <div class="about-text">
             <p>CallaoBank has been serving the people of Callao for over 20 years. We're committed to making banking accessible to everyone in our community with a range of services tailored to your needs.</p>
             
-            <div class="location">
-                <h3>Our Location</h3>
-                <p>Mz A1 Lt.1 Pasaje Jorge Colque Urb. San Juan Masias, Callao</p>
+            <div class="achievements">
+                <div class="achievement-item">
+                    <span class="achievement-number" data-target="20">0</span>
+                    <span class="achievement-label">Years in Service</span>
+                </div>
+                <div class="achievement-item">
+                    <span class="achievement-number" data-target="10000">0</span>
+                    <span class="achievement-label">Satisfied Clients</span>
+                </div>
+                <div class="achievement-item">
+                    <span class="achievement-number" data-target="5">0</span>
+                    <span class="achievement-label">Banking Services</span>
+                </div>
             </div>
-            <div class="map-container">
-                <iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=-77.11800187826158%2C-12.000058686367636%2C-77.11446136236192%2C-11.997812879058106&amp;layer=mapnik&amp;marker=-11.998935785051533%2C-77.11623162031174" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=-11.998936&amp;mlon=-77.116232#map=19/-11.998936/-77.116232&amp;layers=N">Ver el mapa más grande</a></small>
-              </div>
-        </section>
+        </div>
+        
+        <div class="about-image">
+            <img src="https://assets.isu.pub/document-structure/221207022345-28dae8daadca8318078e7830cebf44e7/v1/47e04290c7d2de7dd1a1053c0dd2ada2.jpeg" alt="CallaoBank headquarters" loading="lazy">
+        </div>
+    </div>
+    
+    <div class="location">
+        <h3>Our Location</h3>
+        <p>Mz A1 Lt.1 Pasaje Jorge Colque Urb. San Juan Masias, Callao</p>
+        <div class="map-container">
+            <iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=-77.11800187826158%2C-12.000058686367636%2C-77.11446136236192%2C-11.997812879058106&amp;layer=mapnik&amp;marker=-11.998935785051533%2C-77.11623162031174" style="border: 1px solid black"></iframe><br/>
+            <small><a href="https://www.openstreetmap.org/?mlat=-11.998936&amp;mlon=-77.116232#map=19/-11.998936/-77.116232&amp;layers=N">Ver el mapa más grande</a></small>
+        </div>
+    </div>
+</section>
     </main>
 
     <footer>
