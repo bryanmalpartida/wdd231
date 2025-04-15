@@ -49,13 +49,13 @@ function setupMainPage() {
 
     if (hamburger && navMenu) {
         hamburger.addEventListener("click", () => {
-            // Toggle active class
+            
             hamburger.classList.toggle("active");
             navMenu.classList.toggle("active");
             
-            // Update aria-expanded attribute
+            
             const isExpanded = hamburger.classList.contains("active");
-            hamburger.setAttribute("aria-expanded", isExpanded);
+            hamburger.setAttribute("hamburger", isExpanded);
         });
     }
 
