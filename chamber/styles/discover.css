@@ -127,6 +127,94 @@ nav {
 
 /*END OF NAVIGATION BAR*/
 
+h1 {
+    text-align: center;
+    width: 100%;
+    margin: 20px 0; 
+}
+
+/* DISCOVER GRID LAYOUT */
+.discover-grid {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+    background-color: rgb(9, 40, 61);
+    color: white;
+    padding: 15px;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.card figure {
+    margin: 0;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card address {
+    font-style: normal;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.card p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.card button {
+    background-color: rgb(9, 40, 61);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card button:hover {
+    background-color: rgb(40, 160, 240);
+}
+
+.visit-message {
+    background-color: #f8f9fa;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
 /*FOOTER*/
 
 /*FOOTER GRID STRUCTURE*/

@@ -31,6 +31,7 @@ header {
   }
 
   main {
+    
     background-color: #ffffff;
     color:rgb(9, 40, 61);
     grid-column: 2 / 3;
@@ -39,6 +40,8 @@ header {
     box-sizing: border-box;
      
 }
+
+
 
 
 .right-sidebar {
@@ -134,6 +137,12 @@ nav {
 /*END OF NAVIGATION BAR*/
 
 /*MAIN SECTION*/
+
+h1 {
+    text-align: center;
+    width: 100%;
+    margin: 20px 0; 
+}
 
 
 .container {
@@ -252,9 +261,7 @@ input[type="submit"]:hover {
     text-decoration: underline;
 }
 
-h1{
-    margin-left:180px;
-}
+
 
 
 /*END OF MAIN SECTION*/

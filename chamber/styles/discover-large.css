@@ -19,7 +19,7 @@
         .navigation{
             position:fixed;
             left:-120%;
-            top:130px;
+            top:110px;
             gap:0;
             flex-direction:column;
             background-color:rgb(9, 40, 61);
@@ -38,6 +38,16 @@
         .navigation.active{
             left:0;
     
+        }
+
+        
+
+        .discover-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .card:hover img {
+            transform: none;
         }
     }
     
@@ -61,3 +71,19 @@
             padding: 10px; 
         }
     }
+
+    
+@media (min-width: 641px) and (max-width: 1024px) {
+    .discover-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (min-width: 1025px) {
+    .discover-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+
+}

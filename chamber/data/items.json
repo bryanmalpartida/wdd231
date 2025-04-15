@@ -1,0 +1,60 @@
+{
+    "items": [
+      {
+        "name": "TecnoSoluciones Perú",
+        "address": "Av. Javier Prado Este 3100, San Borja, Lima",
+        "description": "Leading provider of IT solutions and technology services for businesses across Peru.",
+        "category": "Technology",
+        "image": "images/tecnologia.webp"
+      },
+      {
+        "name": "Andean Explorer Tours",
+        "address": "Calle Plateros 364, Cusco",
+        "description": "Specialized in unique travel experiences through Peru's most breathtaking landscapes.",
+        "category": "Travel",
+        "image": "images/viajes.webp"
+      },
+      {
+        "name": "Mi Pequeño Negocio SAC",
+        "address": "Jr. Carabaya 421, Lima",
+        "description": "Supporting local entrepreneurs with resources and networking opportunities.",
+        "category": "Small Business",
+        "image": "images/negocios.webp"
+      },
+      {
+        "name": "Clínica San Felipe",
+        "address": "Av. Gregorio Escobedo 650, Jesús María, Lima",
+        "description": "Comprehensive healthcare services with state-of-the-art facilities.",
+        "category": "Health Care",
+        "image": "images/salud.webp"
+      },
+      {
+        "name": "Cultura Viva",
+        "address": "Calle San Agustín 307, Arequipa",
+        "description": "Promoting diversity and inclusion in Peruvian workplaces and communities.",
+        "category": "Diversity",
+        "image": "images/diversidad.webp"
+      },
+      {
+        "name": "Perú Económico",
+        "address": "Av. República de Panamá 3645, San Isidro, Lima",
+        "description": "Economic research and consulting firm focused on Peruvian market trends.",
+        "category": "Economy",
+        "image": "images/economia.webp"
+      },
+      {
+        "name": "Amazonía Verde",
+        "address": "Jr. Putumayo 163, Iquitos",
+        "description": "Environmental organization dedicated to combating climate change in the Amazon region.",
+        "category": "Climate Change",
+        "image": "images/clima.webp"
+      },
+      {
+        "name": "Energía Renovable Perú",
+        "address": "Av. La Encalada 1380, Surco, Lima",
+        "description": "Pioneers in renewable energy solutions for Peruvian homes and businesses.",
+        "category": "Energy",
+        "image": "images/energia.webp"
+      }
+    ]
+  }
