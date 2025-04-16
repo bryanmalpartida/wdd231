@@ -1,5 +1,8 @@
-// FOOTER//
+// ======================
+// GENERAL UTILITY FUNCTIONS
+// ======================
 
+// Update footer with current year and last modified date
 function updateFooter() {
     const yearElement = document.getElementById('year');
     const lastModifiedElement = document.getElementById('lastModified');
@@ -13,8 +16,7 @@ function updateFooter() {
     }
 }
 
-//MODALS//
-
+// Display modal dialog
 function displayModal(title, message) {
     const modal = document.createElement('div');
     modal.className = 'modal';
@@ -42,28 +44,32 @@ function displayModal(title, message) {
         }
     });
 }
-//HAMBURGER
-function setupMainPage() {
+
+// ======================
+// NAVIGATION FUNCTIONS
+// ======================
+
+// Setup hamburger menu functionality
+function setupHamburgerMenu() {
     const hamburger = document.querySelector(".hamburger");
     const navMenu = document.querySelector(".navigation");
 
     if (hamburger && navMenu) {
         hamburger.addEventListener("click", () => {
-            
             hamburger.classList.toggle("active");
             navMenu.classList.toggle("active");
-            
             
             const isExpanded = hamburger.classList.contains("active");
             hamburger.setAttribute("hamburger", isExpanded);
         });
     }
-
-    updateFooter();
 }
 
-//FORMS
+// ======================
+// FORM HANDLING FUNCTIONS
+// ======================
 
+// Handle form submission
 function setupFormHandler() {
     const form = document.getElementById('registrationForm');
     if (!form) return;
@@ -71,7 +77,7 @@ function setupFormHandler() {
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
         
-        
+        // Collect form data
         const formData = {
             firstName: document.getElementById('firstName').value,
             lastName: document.getElementById('lastName').value,
@@ -82,10 +88,10 @@ function setupFormHandler() {
             submissionDate: new Date().toLocaleString()
         };
         
-        
+        // Save to localStorage
         localStorage.setItem('registrationData', JSON.stringify(formData));
         
-        
+        // Create download file
         const textFileContent = `CallaoBank Client Information\n\n` +
                               `First Name: ${formData.firstName}\n` +
                               `Last Name: ${formData.lastName}\n` +
@@ -104,21 +110,17 @@ function setupFormHandler() {
         document.body.appendChild(a);
         a.click();
         
-       
+        // Clean up
         setTimeout(() => {
             document.body.removeChild(a);
             window.URL.revokeObjectURL(url);
         }, 100);
 
         try {
-           
+            // Get random processor
             const response = await fetch('./data/processors.json');
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
+            if (!response.ok) throw new Error('Network response was not ok');
             const processors = await response.json();
-            
-            
             const randomProcessor = processors[Math.floor(Math.random() * processors.length)];
             
             displayModal(
@@ -126,7 +128,7 @@ function setupFormHandler() {
                 `Thank you for registering with CallaoBank! Our loan processor ${randomProcessor.name} will contact you soon at ${randomProcessor.email} or ${randomProcessor.phone}.`
             );
             
-            
+            // Redirect after 3 seconds
             setTimeout(() => {
                 window.location.href = 'https://bryanmalpartida.github.io/wdd231/bankproject/services.html';
             }, 3000);
@@ -143,20 +145,20 @@ function setupFormHandler() {
     });
 }
 
-// LOAN PROCESSOR LIST
+// ======================
+// LOAN PROCESSOR FUNCTIONS
+// ======================
 
+// Fetch and display loan processors
 async function fetchAndDisplayLoanProcessors() {
     const container = document.getElementById('processorsContainer');
     if (!container) return;
 
-    
     container.innerHTML = '<div class="loading">Loading loan processors...</div>';
 
     try {
         const response = await fetch('./data/processors.json');
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
+        if (!response.ok) throw new Error('Network response was not ok');
         const processors = await response.json();
         
         if (!Array.isArray(processors) || processors.length === 0) {
@@ -171,6 +173,7 @@ async function fetchAndDisplayLoanProcessors() {
     }
 }
 
+// Display processors in the container
 function displayProcessors(processors) {
     const container = document.getElementById('processorsContainer');
     if (!container) return;
@@ -185,7 +188,7 @@ function displayProcessors(processors) {
         </div>
     `).join('');
 
-    
+    // Add event listeners to contact buttons
     document.querySelectorAll('.contact-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             const email = btn.getAttribute('data-email');
@@ -194,25 +197,11 @@ function displayProcessors(processors) {
     });
 }
 
-//LOADING
+// ======================
+// ABOUT SECTION FUNCTIONS
+// ======================
 
-document.addEventListener('DOMContentLoaded', function() {
-    
-    setupMainPage();
-
-    
-    if (document.getElementById('registrationForm')) {
-        setupFormHandler();
-    }
-    
-    if (document.getElementById('processorsContainer')) {
-        fetchAndDisplayLoanProcessors();
-    }
-});
-
-
-// ACHIEVEMENTS
-
+// Animate achievement numbers
 function animateAchievements() {
     const achievementElements = document.querySelectorAll('.achievement-number');
     const animationDuration = 2000; 
@@ -238,7 +227,7 @@ function animateAchievements() {
     });
 }
 
-
+// Setup about section with intersection observer
 function setupAboutSection() {
     const aboutSection = document.querySelector('.about');
     if (!aboutSection) return;
@@ -255,26 +244,17 @@ function setupAboutSection() {
     observer.observe(aboutSection);
 }
 
+// ======================
+// MAIN INITIALIZATION
+// ======================
 
-document.addEventListener('DOMContentLoaded', function() {
-    setupMainPage();
-    setupAboutSection(); 
+// Initialize all page functionality
+function initializePage() {
+    // Always run these
+    setupHamburgerMenu();
+    updateFooter();
     
-    if (document.getElementById('registrationForm')) {
-        setupFormHandler();
-    }
-    
-    if (document.getElementById('processorsContainer')) {
-        fetchAndDisplayLoanProcessors();
-    }
-});
-
-//LOADING ORDER
-document.addEventListener('DOMContentLoaded', function() {
-    // HAMBURGUER FIRST
-    setupMainPage();
-    
-    // OTHER
+    // Page-specific setups
     if (document.getElementById('registrationForm')) {
         setupFormHandler();
     }
@@ -283,9 +263,13 @@ document.addEventListener('DOMContentLoaded', function() {
         fetchAndDisplayLoanProcessors();
     }
     
-    // ABOUT LAST
-    setupAboutSection();
-});
+    if (document.querySelector('.about')) {
+        setupAboutSection();
+    }
+}
+
+// Document ready event listener
+document.addEventListener('DOMContentLoaded', initializePage);
 
 
 
