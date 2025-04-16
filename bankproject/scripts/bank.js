@@ -1,6 +1,4 @@
-// ======================
 // GENERAL UTILITY FUNCTIONS
-// ======================
 
 // Update footer with current year and last modified date
 function updateFooter() {
@@ -45,9 +43,7 @@ function displayModal(title, message) {
     });
 }
 
-// ======================
 // NAVIGATION FUNCTIONS
-// ======================
 
 // Setup hamburger menu functionality
 function setupHamburgerMenu() {
@@ -65,9 +61,7 @@ function setupHamburgerMenu() {
     }
 }
 
-// ======================
 // FORM HANDLING FUNCTIONS
-// ======================
 
 // Handle form submission
 function setupFormHandler() {
@@ -145,9 +139,7 @@ function setupFormHandler() {
     });
 }
 
-// ======================
 // LOAN PROCESSOR FUNCTIONS
-// ======================
 
 // Fetch and display loan processors
 async function fetchAndDisplayLoanProcessors() {
@@ -197,9 +189,7 @@ function displayProcessors(processors) {
     });
 }
 
-// ======================
 // ABOUT SECTION FUNCTIONS
-// ======================
 
 // Animate achievement numbers
 function animateAchievements() {
@@ -244,9 +234,9 @@ function setupAboutSection() {
     observer.observe(aboutSection);
 }
 
-// ======================
+
 // MAIN INITIALIZATION
-// ======================
+
 
 // Initialize all page functionality
 function initializePage() {
