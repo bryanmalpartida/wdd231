@@ -68,7 +68,8 @@ async function processFormSubmission(formData) {
     
     displayModal(
         'Registration Complete', 
-        `Thank you! ${randomProcessor.name} will contact you at ${randomProcessor.email}`
+        `Thank you ${formData.firstName}! ${randomProcessor.name} will contact you at ${formData.email}`
+    
     );
     
     setTimeout(() => {
