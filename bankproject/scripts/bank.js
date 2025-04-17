@@ -1,18 +1,16 @@
-// Import all necessary modules
+// IMPORT
 import { updateFooter, setupHamburgerMenu } from './utilities.js';
 import { setupFormHandler } from './formHandler.js';
 import { fetchAndDisplayLoanProcessors } from './processors.js';
 import { initModal } from './modal.js';
 import { setupAboutSection } from './achievements.js';
 
-// Initialize all page functionality
+// INITIALIZE FUNCTIONABILITY
 function initializePage() {
-    // Always run these
     setupHamburgerMenu();
     updateFooter();
     initModal();
     
-    // Page-specific initializations
     if (document.getElementById('registrationForm')) {
         setupFormHandler();
     }
@@ -26,7 +24,6 @@ function initializePage() {
     }
 }
 
-// Start the application
 document.addEventListener('DOMContentLoaded', initializePage);
 
 
