@@ -1,5 +1,5 @@
 export function initModal() {
-    // This sets up modal functionality that might be used globally
+    
 }
 
 export function displayModal(title, message) {
@@ -19,11 +19,11 @@ export function displayModal(title, message) {
     document.body.appendChild(modal);
     document.body.style.overflow = 'hidden';
     
-    // Focus management
+    
     const closeButton = modal.querySelector('.close-modal');
     closeButton.focus();
     
-    // Close handlers
+   
     const closeModal = () => {
         document.body.removeChild(modal);
         document.body.style.overflow = '';
@@ -34,7 +34,7 @@ export function displayModal(title, message) {
         if (e.target === modal) closeModal();
     });
     
-    // Escape key support
+    
     document.addEventListener('keydown', function handleEscape(e) {
         if (e.key === 'Escape') {
             closeModal();

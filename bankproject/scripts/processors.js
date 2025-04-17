@@ -29,7 +29,7 @@ function displayProcessors(processors, container) {
         </div>
     `).join('');
 
-    // Add event listeners
+
     document.querySelectorAll('.contact-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             const email = btn.getAttribute('data-email');
@@ -39,7 +39,6 @@ function displayProcessors(processors, container) {
 }
 
 function formatPhone(phone) {
-    // Add phone formatting logic if needed
     return phone;
 }
 
