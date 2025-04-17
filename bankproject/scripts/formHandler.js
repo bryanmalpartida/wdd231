@@ -72,7 +72,7 @@ async function processFormSubmission(formData) {
     );
     
     setTimeout(() => {
-        window.location.href = 'services.html';
+        window.location.href = 'https://bryanmalpartida.github.io/wdd231/bankproject/services.html';
     }, 3000);
 }
 
@@ -83,6 +83,6 @@ function handleSubmissionError(error) {
         'Thank you for registering! A processor will contact you soon.'
     );
     setTimeout(() => {
-        window.location.href = 'services.html';
+        window.location.href = 'https://bryanmalpartida.github.io/wdd231/bankproject/services.html';
     }, 3000);
 }
